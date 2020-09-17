@@ -232,6 +232,7 @@ color: var(--basic-light-brown)
 
 /*hotels*/
 
+
 .search-filters h3 {
     font-size: 16px;
     color: var(--basic-white);
@@ -249,25 +250,31 @@ color: var(--basic-light-brown)
     font-size: 12px;
     line-height: 18px;
 }
+.sorting-list {
+    list-style: none;
+}
 
 .sort-button {
     font-size: 12px;
     line-height: 18px;
     color: var(--basic-extra-light-black);
-    text-decoration: underline;
+    border: none;
+    border-bottom: 1px dashed var(--basic-extra-light-black);
+    background-color: var(--basic-white);
 }
 .sort-button:hover {
     color: var(--basic-light-blue);
+    border-bottom: 1px dashed var(--basic-light-blue);
 }
 
 .sort-button:focus {
     color: var(--basic-black);
-    text-decoration: none;
+    border: none;
 }
 
 .active-sort-button{
     color: var(--basic-light-blue);
-    text-decoration: none;
+    border: none;
 }
 
 .progress-button {
@@ -284,7 +291,9 @@ color: var(--basic-light-brown)
 .active-progress-button {
     color: var(--basic-light-blue);
 }
-
+.found-hotels {
+    list-style: none;
+}
 .name-hotel {
     font-weight: bold;
     font-size: 21px;
