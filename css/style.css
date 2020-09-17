@@ -1,0 +1,219 @@
+/*Fonts*/
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Sans'), local('PTSans-Regular'),
+         url('../fonts/pt-sans-v12-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/pt-sans-v12-latin_cyrillic-regular.woff') format('woff');
+  }
+ 
+  @font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('PT Sans Bold'), local('PTSans-Bold'),
+         url('../fonts/pt-sans-v12-latin_cyrillic-700.woff2') format('woff2'),
+         url('../fonts/pt-sans-v12-latin_cyrillic-700.woff') format('woff');
+  }
+/*colors*/
+:root {
+--basic-light-black: #231F20;
+--basic-black: #000000;
+--basic-light-blue: #81B3D2;
+--basic-extra-light-brown: #A9A9A9;
+--basic-white: #FFFFFF;
+--basic-blue: #669EC0;
+--basic-dark-blue: #5496BD;
+--basic-light-brown: #766357;
+--basic-brown: #604E43;
+--basic-dark-brown: #503E33;
+--basic-extralight-gray: #F2F2F2;
+--basic-light-gray: #EBEBEB;
+--basic-dark-gray: #666666;
+--basic-verygray: #CACACA;
+--basic-gray: #eeeeee;
+--basic-feature-brown: #333333;
+--basic-light-white: rgba(255, 255, 255, 0.9);
+  }
+
+/*Global*/
+
+body {
+    min-width: 1200px;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    background-position: 50% 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-header{
+    background-color: var(--basic-white);
+}
+.main-navigation {
+    font-weight: bold;
+}
+.site-navigation {
+    list-style: none;
+}
+
+.nav-item {
+    color: var(--basic-black);
+}
+.nav-item:hover {
+    color: var(--basic-light-blue)
+}
+.nav-item:focus {
+    color: var(--basic-extra-light-brown)
+}
+.active {
+    color: var(--basic-light-brown)
+}
+
+.intro-features {
+    background-color: var(--basic-white);
+    color: var(--basic-feature-brown);
+    text-align: center;
+}
+.intro-features-h {
+    font-weight: bold;
+    font-size: 21px;
+    color: var(--basic-black);
+}
+
+.first-feature {
+    background-color: var(--basic-light-blue);
+    color: var(--basic-white);
+    line-height: 21px;
+}
+.first-feature h3 {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.first-feature-items {
+    background-color: var(--basic-white);
+    color: var(--basic-feature-brown);
+    line-height: 21px;
+}
+
+.first-feature-items h3 {
+    font-size: 21px;
+    color: var(--basic-black);
+    font-weight: bold;
+}
+
+.second-feature {
+    background-color: var(--basic-light-blue);
+    color: var(--basic-white);
+    line-height: 21px;
+}
+.second-feature h3{
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.other-features {
+    background-color: var(--basic-gray);
+    color: var(--basic-feature-brown);
+    line-height: 21px;
+}
+.other-features h3{
+    font-size: 21px;
+    font-weight: bold;
+    color: var(--basic-black)
+}
+
+.booking {
+    background-color: var(--basic-white);
+    color: var(--basic-feature-brown);
+    line-height: 24px;
+    text-align: center;
+}
+.booking-qestion {
+    color: var(--basic-black);
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+.button-booking {
+    background-color: var(--basic-light-brown);
+    color: var(--basic-white);
+    font-size: 21px;
+    line-height: 26px;
+    width: 568px;
+    height: 86px;
+    font-weight: bold;
+}
+.button-booking:hover {
+    background-color: var(--basic-brown);
+}
+
+.button-booking:focus {
+    background-color: var(--basic-dark-brown);
+}
+
+
+.map {
+    background-color: var(--basic-white);
+}
+
+.main-footer {
+    background-color: var(--basic-light-white);
+}
+
+.contacts {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    color: var(--basic-black)
+}
+
+.phone {
+    color: var(--basic-black)
+}
+
+.social-item {
+    color: var(--basic-light-blue);
+}
+
+.social-item:hover {
+    color: var(--basic-blue)
+}
+
+.social-item:focus {
+    color: var(--basic-dark-blue)
+}
+
+.developer {
+    color: var(--basic-feature-brown);
+    line-height: 26px;
+}
+
+.developer a {
+    color: var(--basic-light-black);
+}
+
+.developer a:hover {
+    color: var(--basic-light-blue)
+}
+
+.developer a:focus {
+    color: var(--basic-extra-light-brown)
+}
