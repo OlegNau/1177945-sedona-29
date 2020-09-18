@@ -259,22 +259,23 @@ color: var(--basic-light-brown)
     line-height: 18px;
     color: var(--basic-extra-light-black);
     border: none;
-    border-bottom: 1px dashed var(--basic-extra-light-black);
+    border-bottom: 1px dotted var(--basic-extra-light-black);
     background-color: var(--basic-white);
+    text-transform: uppercase;
 }
 .sort-button:hover {
     color: var(--basic-light-blue);
-    border-bottom: 1px dashed var(--basic-light-blue);
+    border-bottom: 1px dotted var(--basic-light-blue);
 }
 
 .sort-button:focus {
     color: var(--basic-black);
-    border: none;
+    border: 1px dotted transparent;;
 }
 
 .active-sort-button{
     color: var(--basic-light-blue);
-    border: none;
+    border: 1px dotted transparent;;
 }
 
 .progress-button {
