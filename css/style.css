@@ -89,6 +89,10 @@ img {
 }
 
 /*main tittle page*/
+.main-site-logo {
+    background-color: var(--basic-gray);
+}
+
 
 .intro-features {
     background-color: var(--basic-white);
@@ -268,14 +272,14 @@ color: var(--basic-light-brown)
     border-bottom: 1px dotted var(--basic-light-blue);
 }
 
-.sort-button:focus {
+.sort-button:active {
     color: var(--basic-black);
-    border: 1px dotted transparent;;
+    border-bottom: 1px dotted transparent;;
 }
 
 .active-sort-button{
     color: var(--basic-light-blue);
-    border: 1px dotted transparent;;
+    border-bottom: 1px dotted transparent;;
 }
 
 .progress-button {
