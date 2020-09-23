@@ -7,22 +7,23 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header class="main-header">
+  <body class="page-body">
+    <div class="container">
+      <header class="main-header">
       <nav class="main-navigation">
         <ul class="site-navigation">
-        <li><a href="" class="nav-item">Информация</a></li>
-          <li><a href="" class="nav-item">Фото и видео</a></li>
-          <li><a href="" class="nav-item">Карта штата</a></li>
-          <li> <a href="catalog.html" class="nav-item">Гостиницы</a></li>
+          <li class="nav-information"><a href="" class="nav-item">Информация</a></li>
+          <li class="nav-media"><a href="" class="nav-item">Фото и видео</a></li>
+          <li class="nav-map-state"><a href="" class="nav-item">Карта штата</a></li>
+          <li class="nav-hotels"> <a href="catalog.html" class="nav-item">Гостиницы</a></li>
         </ul>
-        <a href="index.html">
-          <img src="img/header-logo.svg" width="138" height="70" alt="logo Sedona" class="main-header-logo">
+        <a href="index.html" class="main-header-logo">
+          <img src="img/header-logo.svg" width="138" height="70" alt="logo Sedona" >
         </a>
-        </nav>
+      </nav>
     </header>
-    <main class="container">
-      <section >
+    <main class="main-mainpage">
+      <section class="main-logo-container">
       <h1>Добро пожаловать в Седону</h1>
       <img src="img/sedona-main-logo.svg" width="458" height="352" alt="MountainsMain" class="main-site-logo">
       </section>
@@ -33,25 +34,25 @@
             <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
           </div>
           <div class="first-feature">
-            <div>
+            <div class="first-feature-block1">
               <h3>Настоящий городок</h3>
-              <p>— №1 —</p>
+              <p class="number-feature">— №1 —</p>
               <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
-            <div>
+            <div сlass="first-feature-block2">
                <img src="img/real-city.jpg" width="800" height="256" alt="City Sedona"> 
             </div>
           </div>
           <div class="first-feature-items">
-            <div>
+            <div class="housing">
               <h3>Жильё</h3>
               <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </div>
-            <div>
+            <div class="food">
               <h3>Еда</h3>
               <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
              </div>
-            <div> 
+            <div class="souvenir"> 
               <h3>Сувениры</h3>
               <p>Не только китайского, но и местногопроизводства!</p>
             </div>
@@ -60,9 +61,9 @@
             <div>
               <img src="img/bridge.jpg" width="800" height="256" alt="devil's bridge"> 
             </div>
-            <div>
-              <h3>Там есть Мост дьявола</h3>
-              <p>— №2 —</p>
+            <div class="brige-text-block">
+              <h3>Там есть<br> Мост дьявола</h3>
+              <p class="number-feature">— №2 —</p>
               <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
           </div>
@@ -93,7 +94,9 @@
       </section>
       <section class="map">
         <h2>Карта</h2>
+        <div class="map-position">
         <img src="img/map.png" width="1199" height="593" alt="Map of Sedona"> 
+        </div>
       </section>
     </main>
     <footer class="main-footer">
@@ -125,6 +128,6 @@
         </p>
       </section>
     </footer>
-  
+  </div>
   </body>
 </html>
