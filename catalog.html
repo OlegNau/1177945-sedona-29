@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
+    <div class="container">
     <header class="main-header">
       <nav class="main-navigation">
         <ul class="site-navigation">
-        <li><a href="" class="nav-item">Информация</a></li>
-          <li><a href="" class="nav-item">Фото и видео</a></li>
-          <li><a href="" class="nav-item">Карта штата</a></li>
-          <li> <a href="" class="nav-item active-page">Гостиницы</a></li>
+          <li class="nav-information"><a href="" class="nav-item">Информация</a></li>
+          <li class="nav-media"><a href="" class="nav-item">Фото и видео</a></li>
+          <li class="nav-map-state"><a href="" class="nav-item">Карта штата</a></li>
+          <li class="nav-hotels"> <a href="" class="nav-item active-page">Гостиницы</a></li>
         </ul>
         <a href="index.html">
           <img src="img/header-logo.svg" width="138" height="70"  alt="logo Sedona" class="main-header-logo">
@@ -34,6 +35,7 @@
     </section>
     <section class="search-results">
       <h2>Результат</h2>
+      <div class="sort-panel">
       <span class="search-quantity">Найдено: 3</span>
       <span class="sorting">Сортировка</span>
       <ul class="sorting-list">
@@ -49,36 +51,55 @@
       </ul>
       <button class="small-large progress-button">От малого к большему</button>
       <button class="large-smal progress-button active-progress-button">От большего к малому</button>
+      </div>
         <ul class="found-hotels">
           <li class="hotel">
             <img src="img/amara-resort-spa.jpg" width="135" height="90" alt="Amara Resort & Spa">
-            <a href="" class="name-hotel">Amara Resort & Spa</a>
-            <p class="type">Гостиница</p>
-            <p class="price">От 4000 Р.</p>
-            <a href="" class="details">Подробнее</a> 
-            <a href="" class="to-book">Забронировать</a>
-            <div class="stars">4 звезды</div>
-            <p class="rating">Рейтинг: 8,5</p>
+            <div>
+              <a href="" class="name-hotel">Amara Resort & Spa</a>
+              <div>
+                <p class="type">Гостиница</p>
+                <p class="price">От 4000 Р.</p>
+              </div>
+              <a href="" class="details">Подробнее</a> 
+              <a href="" class="to-book">Забронировать</a>
+            </div>
+            <div>
+              <div class="stars">4 звезды</div>
+              <p class="rating">Рейтинг: 8,5</p>
+            </div>
           </li>
           <li class="hotel">
             <img src="img/desert-quail-inn.jpg" width="135" height="90" alt="Desert Quail Inn">
-            <a href="" class="name-hotel">Desert Quail Inn</a>
-            <p class="type">Мотель</p> 
-            <p class="price">От 3000 Р.</p>
-            <a href="" class="details">Подробнее</a> 
-            <a href="" class="to-book">Забронировать</a>
+            <div>
+              <a href="" class="name-hotel">Desert Quail Inn</a>
+              <div>
+                <p class="type">Мотель</p> 
+                <p class="price">От 3000 Р.</p>
+              </div>
+              <a href="" class="details">Подробнее</a> 
+              <a href="" class="to-book">Забронировать</a>
+            </div>
+            <div>  
             <div class="stars">3 звезды</div>
             <p class="rating">Рейтинг: 8,9</p>
+            </div>
           </li>
           <li class="hotel">
             <img src="img/villas-at-poco-diablo.jpg" width="135" height="90" alt="Villas at Poco Diablo">
-            <a href="" class="name-hotel">Villas at Poco Diablo</a>
-            <p class="type">Апартаменты</p> 
-            <p class="price">От 2000 Р.</p>
-            <a href="" class="details">Подробнее</a> 
-            <a href="" class="to-book">Забронировать</a>
-            <div class="stars">2 звезды</div>
-            <p class="rating">Рейтинг: 9,2</p>
+            <div>
+              <a href="" class="name-hotel">Villas at Poco Diablo</a>
+              <div>
+                <p class="type">Апартаменты</p> 
+                <p class="price">От 2000 Р.</p>
+              </div>
+              <a href="" class="details">Подробнее</a> 
+              <a href="" class="to-book">Забронировать</a>
+            </div>
+            <div>
+              <div class="stars">2 звезды</div>
+              <p class="rating">Рейтинг: 9,2</p>
+            </div>
           </li>
         </ul>
     </section>
@@ -112,5 +133,6 @@
       </p>
     </section>
   </footer>
+</div>
   </body>
 </html>
