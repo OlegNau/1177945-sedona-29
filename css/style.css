@@ -301,8 +301,11 @@ padding-bottom: 40px;
 .booking-qestion {
     color: var(--basic-black);
     font-size: 30px;
-    font-weight: bold;
-    
+    font-weight: bold;  
+}
+.booking p{
+    width: 450px;
+    margin: 39px auto 46px;
 }
 .button-booking {
     background-color: var(--basic-light-brown);
