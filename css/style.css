@@ -115,6 +115,7 @@ img {
      left: 50%;
      margin-left: -69px;
      top: -17px;;
+     z-index: 2;
 }
 
 .site-navigation li:nth-child(4n+1) {
@@ -150,13 +151,46 @@ img {
     margin: 0 auto;
     box-shadow: 0 0 30px var(--basic-extra-light-black);
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+
 .main-logo-container {
     text-align: center;
-}
-.main-site-logo {
-    margin: 0 auto;
+    height: 509px;
+    background-image: url("../img/background-photo.jpg");
     background-color: var(--basic-gray);
+    position: relative;
 }
+
+.main-logo-container::after {
+    content:"";
+    position: absolute;
+    width: 1200px;
+    height: 272px;
+    bottom: -216px;
+    left: 0;
+    z-index: 2;
+    background-image: url("../img/background-photo-mask.svg");
+    background-repeat: no-repeat;
+}
+
+.main-site-logo {
+    margin: 77px auto 0;
+    ;
+}
+
 
 
 .intro-features {
@@ -173,7 +207,7 @@ img {
     font-size: 21px;
     color: var(--basic-black);
     line-height: 26px;
-    margin-bottom: 45px;
+    margin-bottom: 47px;
 }
 
 .first-feature {
@@ -204,7 +238,6 @@ img {
 
 .first-feature-items {
     display: grid;
-    height: 331px;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: var(--basic-white);
     color: var(--basic-feature-brown);
@@ -217,11 +250,39 @@ img {
     justify-self: center;
     align-self: end;
     padding-bottom: 82px;
+    padding-top: 160px;
+}
+.housing {
+    position: relative;
+}
+.housing::before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 72px;
+    top: 60px;
+    left: 112px;
+    background-image: url(../img/house-icon.svg);
+    z-index: 2;
 }
 
 .housing p {
     margin-bottom: 0;
     margin-top: 26px;
+}
+
+.food{
+    position: relative;
+}
+
+.food::before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 70px;
+    top: 61px;
+    left: 112px;
+    background-image: url(../img/food-icon.svg);
 }
 
 .food p {
@@ -230,6 +291,20 @@ img {
 }
 
 .souvenir {
+    position: relative;
+}
+
+.souvenir::before {
+    content: "";
+    position: absolute;
+    width: 64px;
+    height: 77px;
+    top: 55px;
+    left: 117px;
+    background-image: url(../img/present-icon.svg);
+}
+
+.souvenir p{
     margin-bottom: 0;
     margin-top: 26px;
 }
@@ -297,15 +372,17 @@ padding-bottom: 40px;
     color: var(--basic-feature-brown);
     line-height: 24px;
     text-align: center;
+    padding-top: 55px;
 }
 .booking-qestion {
     color: var(--basic-black);
     font-size: 30px;
     font-weight: bold;  
+
 }
 .booking p{
     width: 450px;
-    margin: 39px auto 46px;
+    margin: 27px auto 46px;
 }
 .button-booking {
     background-color: var(--basic-light-brown);
@@ -342,27 +419,41 @@ padding-bottom: 40px;
 
 .main-footer {
     display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 54px;
     background-color: var(--basic-light-white);
-    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 82px;
+    
 }
 
+
 .contacts {
-    width: 260px;
     text-align: center;
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
     color: var(--basic-black);
     justify-self: center;
+   
+}
+
+.phone {
+    margin-top: 0px;
+    margin-bottom: 36px;
+}
+.teg-footer {
+margin-top: 21px;
+margin-bottom: 9px;
 }
 
 .phone {
     color: var(--basic-black)
 }
 .social {
-    width: 150px;
+    
     text-align: center;
     justify-self: center;
+    margin: 0 auto;
 }
 
 .social ul{
@@ -370,11 +461,17 @@ padding-bottom: 40px;
     display: flex;
     justify-content: space-between;
     padding: 0;
+    margin: 0;
 }
 .social-item {
-    color: var(--basic-light-blue);
+    display: flex;
     margin-right: 6px;
-    
+    width: 46px;
+    height: 48px;
+    background-color: var(--basic-light-blue);
+    align-items: center;
+    justify-content: center;
+    margin-top: 36px;
 }
 
 .social-item:hover {
@@ -386,11 +483,12 @@ padding-bottom: 40px;
 }
 
 .developer {
-    max-width:200px;
+    
     color: var(--basic-feature-brown);
     line-height: 26px;
     text-align: center;
     justify-self: center;
+    margin-top: 38px;
 }
 
 .developer a {
@@ -398,6 +496,9 @@ padding-bottom: 40px;
     vertical-align: middle;
 }
 
+.developer p{
+    margin: 0;
+}
 .developer a:hover {
     color: var(--basic-light-blue)
 }
