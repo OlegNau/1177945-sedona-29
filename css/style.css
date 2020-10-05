@@ -212,7 +212,7 @@ img {
 
 .first-feature {
     display: grid;
-    max-height: 256px;
+    min-height: 256px;
     background-color: var(--basic-light-blue);
     color: var(--basic-white);
     line-height: 21px;
@@ -229,6 +229,11 @@ img {
     max-width: 300px;
     text-align: center;
     justify-self: center;
+}
+.first-feature img {
+   max-width: 100%;
+   height: auto;
+   vertical-align: bottom;
 
 }
 .number-feature {
@@ -246,11 +251,10 @@ img {
 }
 
 .first-feature-items div{
-    width: 300px;
+    width: 400px;
     justify-self: center;
     align-self: end;
-    padding-bottom: 82px;
-    padding-top: 160px;
+    padding: 160px 50px 82px;
 }
 .housing {
     position: relative;
@@ -261,7 +265,7 @@ img {
     width: 75px;
     height: 72px;
     top: 60px;
-    left: 112px;
+    left: 162px;
     background-image: url(../img/house-icon.svg);
     z-index: 2;
 }
@@ -281,7 +285,7 @@ img {
     width: 75px;
     height: 70px;
     top: 61px;
-    left: 112px;
+    left: 162px;
     background-image: url(../img/food-icon.svg);
 }
 
@@ -300,7 +304,7 @@ img {
     width: 64px;
     height: 77px;
     top: 55px;
-    left: 117px;
+    left: 167px;
     background-image: url(../img/present-icon.svg);
 }
 
@@ -319,7 +323,7 @@ img {
 
 .second-feature {
     display: grid;
-    max-height: 256px;
+    min-height: 256px;
     background-color: var(--basic-light-blue);
     color: var(--basic-white);
     line-height: 21px;
@@ -332,17 +336,19 @@ img {
     font-size: 21px;
     font-weight: bold;
 }
-.brige-text-block {
-    max-width: 300px;
-    text-align: center;
-    justify-self: center;
+
+
+.second-feature img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
 }
 
 .brige-text-block {
-    max-width: 300px;
     text-align: center;
     justify-self: center;
     align-self: center;
+    padding: 0 40px;
 }
 
 .other-features {
@@ -362,9 +368,10 @@ img {
 }
 
 .other-features div{
-max-width: 265px;
 justify-self: center;
 padding-bottom: 40px;
+padding-left: 69px;
+padding-right: 69px;
 }
 
 .booking {
@@ -392,6 +399,7 @@ padding-bottom: 40px;
     width: 568px;
     height: 86px;
     font-weight: bold;
+    border: none;
 }
 .button-booking:hover {
     background-color: var(--basic-brown);
@@ -419,8 +427,8 @@ padding-bottom: 40px;
 
 .main-footer {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-gap: 54px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 55px;
     background-color: var(--basic-light-white);
     padding: 0 82px;
     
@@ -439,7 +447,7 @@ padding-bottom: 40px;
 
 .phone {
     margin-top: 0px;
-    margin-bottom: 36px;
+    margin-bottom: 38px;
 }
 .teg-footer {
 margin-top: 21px;
@@ -465,15 +473,17 @@ margin-bottom: 9px;
 }
 .social-item {
     display: flex;
-    margin-right: 6px;
+    margin-left: 6px;
     width: 46px;
     height: 48px;
     background-color: var(--basic-light-blue);
     align-items: center;
     justify-content: center;
-    margin-top: 36px;
+    margin-top: 34px;
 }
-
+.social ul:first-child{
+    margin-left: 0px;
+}
 .social-item:hover {
     color: var(--basic-blue)
 }
@@ -483,12 +493,11 @@ margin-bottom: 9px;
 }
 
 .developer {
-    
     color: var(--basic-feature-brown);
     line-height: 26px;
     text-align: center;
     justify-self: center;
-    margin-top: 38px;
+    margin-top: 36px;
 }
 
 .developer a {
@@ -516,6 +525,8 @@ color: var(--basic-light-brown)
 .search-filters {
    display: grid;
    grid-template-columns: 25% 25% 50%;
+   background-image: url("../img/filter-background.jpg");
+   min-height: 217px;
 }
 
 .search-filters h3 {
@@ -529,7 +540,7 @@ color: var(--basic-light-brown)
 
 .sort-panel {
     display: flex;
-    padding: 29px 73px 31px;
+    padding: 31px 73px 31px;
 }
 
 .search-quantity{
@@ -580,9 +591,9 @@ color: var(--basic-light-brown)
 
 .progress-button {
     color: var(--basic-verygray);
-    padding-left: 0;
-    padding-right: 0;
     text-decoration: none;
+    margin-left: 12px;
+    margin-top: 5px;
 }
 
 .progress-button:hover {
@@ -614,6 +625,7 @@ color: var(--basic-light-brown)
 }
 
 .hotel:last-child {
+    padding-bottom: 34px;
     border-bottom: 1px solid var(--basic-border-hotel-gray);
 }
 
@@ -687,9 +699,10 @@ display: grid;
 }
 .stars {
     color: var(--basic-light-blue);
-    margin-top: 3px;
+    margin-top: 5px;
     text-align: end;
     align-self: start;
+    scale: 1.2
 }
 .rating {
     margin-bottom: 0px;
@@ -699,4 +712,5 @@ display: grid;
     background-color: var(--basic-extralight-gray);
     text-align: center;
     align-self: end;
+    line-height: 27px;
 }
