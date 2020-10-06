@@ -609,7 +609,7 @@ color: var(--basic-light-brown)
 }
 .found-hotels {
     display: grid;
-    grid-template-rows: 150px 150px 150px;
+    
     list-style: none;
     padding: 0;
     margin: 0;
@@ -625,7 +625,7 @@ color: var(--basic-light-brown)
 }
 
 .hotel:last-child {
-    padding-bottom: 34px;
+    padding-bottom: 30px;
     border-bottom: 1px solid var(--basic-border-hotel-gray);
 }
 
@@ -652,7 +652,7 @@ color: var(--basic-light-brown)
 
 .type, .price{
     color: var(--basic-feature-brown);
-    margin: 7px 3px 17px 0px;
+    margin: 7px 3px 15px 0px;
    display: inline-block;
    width: 110px;
 }
