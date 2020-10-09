@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <=11
+*/
+
 /*Fonts*/
 @font-face {
     font-family: 'PT Sans';
@@ -145,6 +152,7 @@ img {
 .container {
     min-height: 100%;
     display: grid;
+    grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
     width: 1200px;
@@ -160,7 +168,8 @@ img {
     border: 0;
     padding: 0;
     white-space: nowrap;
-    clip-path: inset(100%);
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
@@ -761,9 +770,27 @@ display: grid;
 
 .input-form {
     width: 346px;
-    padding: 11px 14px;
+    padding-left: 14px;
+    padding-right: 38px;
+    height: 38px;
     border: none;
     background-color: var(--basic-extralight-gray);
+}
+
+.input-form::-webkit-input-placeholder {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+}
+
+.input-form::-moz-placeholder {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--basic-black);
+    text-transform: uppercase;
 }
 
 .input-form::placeholder {
@@ -776,7 +803,7 @@ display: grid;
 
 .switch-form {
     max-width: 36px;
-    padding: 6px 6px;
+    height: 38px;
     border: none;
     background-color: var(--basic-extralight-gray);
     text-transform: uppercase;
@@ -785,6 +812,10 @@ display: grid;
     font-size: 14px;
     line-height: 26px;
     color: var(--basic-black);
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -809,7 +840,8 @@ padding: 0;
 .number-of-people {
     display: grid;
     grid-template-columns: 226px 226px;
-    column-gap: 4px;;
+    -moz-column-gap: 4px;
+         column-gap: 4px;;
 }
 .booking-item label{
     margin-right: auto;
@@ -845,33 +877,53 @@ padding: 0;
     color: var(--basic-extra-light-white);
     outline: none;
 }
+.search-buttton:focus {
+    outline: none;
+}
 
-.booking-item-date svg {
+.calendar {
     position: absolute;
-    right: 9px;
+    right: 14px;
+    top: 6px;
+    border: none;
+    height: 23px;
+    width: 21px;
 }
 
-.booking-item svg:hover path {
+.calendar-image:hover path {
     fill: var(--basic-black);
+    
 }
 
-.booking-item svg:active path {
+.calendar-image:active path {
     fill: var(--basic-light-blue);
+  
 }
 
-.switch-button:hover svg rect {
+.calendar:hover, .calendar:active .calendar:focus {
+    outline: none;
+    border: none;
+}
+
+.switch-button:hover svg {
     fill: var(--basic-black);
 }
 
 .switch-button:hover {
     background-color: var(--basic-light-gray);
+
 }
 .switch-button:active {
     background-color: var(--basic-white);
-    outline: 2px solid var(--basic-border-hotel-gray);
+    outline: none;
+    border: 2px solid var(--basic-border-hotel-gray);
+}
+.switch-button:focus {
+    outline: none;
 }
 
-.switch-button:active svg rect {
+
+.switch-button:active svg  {
     fill: var(--basic-light-blue);
 }
 
@@ -880,5 +932,16 @@ padding: 0;
 }
 .booking-item input:focus {
     background-color: var(--basic-white);
-    outline: 2px solid var(--basic-border-hotel-gray);
+    outline: none; 
+    border: 2px solid var(--basic-border-hotel-gray);
+}
+.input-form:hover + .calendar {
+    background-color: var(--basic-light-gray);
+    outline: none;
+    border: none;
+}
+.input-form:focus + .calendar {
+    background-color: var(--basic-white);
+    outline: none;
+    border: none;
 }
