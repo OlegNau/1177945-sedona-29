@@ -709,6 +709,11 @@ color: var(--basic-white);
     color:var(--basic-black);
     background-color: var(--basic-white);
 }
+
+.range-filter button:focus {
+    outline: none;
+}
+
 .cost-filter-container legend {
   margin-bottom: 12px;
 }
@@ -796,15 +801,15 @@ color: var(--basic-white);
     margin-top: 5px;
 }
 
-.progress-button:hover {
-    color: var(--basic-black);
+.progress-button svg:hover {
+    fill: var(--basic-black);
 }
-.progress-button:focus {
-    color: var(--basic-light-blue);
+.progress-button svg:focus {
+    fill: var(--basic-light-blue);
 }
 
-.active-progress-button {
-    color: var(--basic-light-blue);
+.active-progress-button svg {
+    fill: var(--basic-light-blue);
     
 }
 .found-hotels {
