@@ -115,7 +115,7 @@ img {
 .nav-item:hover {
     color: var(--basic-light-blue)
 }
-.nav-item:focus {
+.nav-item:active {
     color: var(--basic-extra-light-black)
 }
 .main-header-logo {
@@ -415,7 +415,7 @@ padding-right: 69px;
     background-color: var(--basic-brown);
 }
 
-.button-booking:focus {
+.button-booking:active {
     background-color: var(--basic-dark-brown);
     color: var(--basic-extra-light-white);
 }
@@ -538,23 +538,22 @@ color: var(--basic-light-brown)
 
 /*hotels*/
 
-.search-filters {
+
+.search-filters-form {
    display: grid;
    grid-template-columns: 24% 24% 52%;
    background-image: url("../img/filter-background.jpg");
    background-repeat: no-repeat;
-   min-height: 217px;
-   padding: 26px 73px 0px;
-   
-}
+   min-height: 217px; 
+   padding: 26px 73px 0px;} 
 
-
-
-.infrastructure ul, .type-of-housing ul {
+.infrastructure ul, .type-of-housing ul  {
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
+
 .filter-option label {
     position: relative;
     display: block;
@@ -563,19 +562,23 @@ color: var(--basic-light-brown)
   }
 
    .filter-option {
-margin-bottom: 25px;
-padding-left: 39px;
-color: var(--basic-white);
+    margin-bottom: 25px;
+   color: var(--basic-white);
   }
 
-  .type-of-housing .filter-option {
-      padding-left: 43px;
+  .filter-option label {
+    padding-left: 39px;
+  }
+
+  .housing-filter-option label {
+
+    padding-left: 43px;
   }
 
 .filter-input-checkbox + label::before {
     content: "";
     position: absolute;
-    left: -40px;
+    left: 0px;
     top: 0;
     width: 23px;
     height: 23px;
@@ -591,7 +594,7 @@ color: var(--basic-white);
     content: "";
     position: absolute;
     top: 0px;
-    left: -40px;
+    left: 0px;
     width: 27px;
     height: 23px;
     background-image: url("../img/checkbox-on.svg");
@@ -600,25 +603,30 @@ color: var(--basic-white);
 }
 
 
-
-.search-filters legend {
+.search-filters-form h3 {
     font-size: 16px;
     color: var(--basic-white);
     font-weight: bold;
+    margin-top: 0;
     margin-bottom: 25px;
 }
-.type-of-housing {
-    
+
+.filter-input-checkbox:focus + label:before {
+outline: thin dotted;
+outline: 5px auto -webkit-focus-ring-color;
+outline-offset:-2px;
 }
 
+.filter-input-checkbox:focus + label:after {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset:-2px;
+}
 
 /*ползунок*/
 .cost-filter {
     justify-self: end;
-
 }
-
-
 
     .cost-filter-container {
     border: none;
@@ -633,26 +641,30 @@ color: var(--basic-white);
     width: 317px;
     position: relative;
     border: 2px solid var(--basic-white);
+    color: var(--basic-white);
+    padding: 0 5px;
+    
 }
-
+.cost-inputs-label {
+  width: 74px;
+  height: 32px;
+  background-color: transparent; 
+  border: none;
+   text-align: end;
+   line-height: 32px;
+}
 .cost-inputs-item {
-    width: 157px;
+    width: 74px;
     height: 32px;
     background-color: transparent;
     border: none;
-    text-align: center;
-
-    color: var(--basic-white)
+    text-align: start;
+    color: var(--basic-white);
     
 }
 
-.cost-inputs-item::placeholder {
-    color: var(--basic-white);
-    opacity: 1;
-}
 
 .range-controls .scale {
-  
   height: 2px;
   background: var(--basic-extra-light-white)
 }
@@ -683,6 +695,7 @@ color: var(--basic-white);
     border-radius: 50%;
     box-shadow: 0 2px 1px 0 var(--basic-toggle-color);
     cursor: pointer;
+    margin: 0;
   }
 .range-controls .toggle-max {
   left: 253px;
@@ -692,7 +705,8 @@ color: var(--basic-white);
     transform: scale(1.2);
 }
 
-.range-filter button {
+
+.range-filter .show-button {
     background-color: transparent;
     border: 2px solid var(--basic-white);
     padding: 0;
@@ -705,16 +719,13 @@ color: var(--basic-white);
     text-transform: uppercase;
     display: block;
 }
-.range-filter button:hover{
+.range-filter .show-button:hover{
     color:var(--basic-black);
     background-color: var(--basic-white);
 }
 
-.range-filter button:focus {
-    outline: none;
-}
 
-.cost-filter-container legend {
+.cost-filter-container h3{
   margin-bottom: 12px;
 }
 
@@ -875,7 +886,7 @@ color: var(--basic-white);
 .details:hover {
     background-color: var(--basic-blue);
 }
-.details:focus {
+.details:active {
     background-color: var(--basic-dark-blue);
     color: var(--basic-extra-light-white);
 }
@@ -895,7 +906,7 @@ color: var(--basic-white);
     background-color: var(--basic-brown);
 }
 
-.to-book:focus {
+.to-book:active {
     background-color: var(--basic-dark-brown);
     color: var(--basic-extra-light-white);
 }
@@ -1068,7 +1079,6 @@ padding: 0;
     outline: none;
 }
 .search-buttton:focus {
-    outline: none;
 }
 
 .calendar {
@@ -1081,11 +1091,6 @@ padding: 0;
     padding: 0;
 }
 
-.calendar:focus {
-    border: none;
-    outline: none;
-
-}
 
 .calendar-image:hover path {
     fill: var(--basic-black);
@@ -1098,7 +1103,6 @@ padding: 0;
 }
 
 .calendar:hover, .calendar:active .calendar:focus {
-    outline: none;
     border: none;
 }
 
@@ -1112,12 +1116,9 @@ padding: 0;
 }
 .switch-button:active {
     background-color: var(--basic-white);
-    outline: none;
     border: 2px solid var(--basic-border-hotel-gray);
 }
-.switch-button:focus {
-    outline: none;
-}
+
 
 
 .switch-button:active svg  {
@@ -1130,16 +1131,14 @@ padding: 0;
 }
 .booking-item input:focus {
     background-color: var(--basic-white);
-    outline: none; 
+    outline: none;
     border-color: var(--basic-border-hotel-gray);
 }
 .input-form:hover + .calendar {
     background-color: var(--basic-light-gray);
-    outline: none;
-    border: none;
+    
 }
 .input-form:focus + .calendar {
     background-color: var(--basic-white);
-    outline: none;
-    border: none;
+    
 }
