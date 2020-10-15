@@ -402,6 +402,7 @@ padding-right: 69px;
     margin: 27px auto 45px;
 }
 .button-booking {
+    position: relative;
     background-color: var(--basic-light-brown);
     color: var(--basic-white);
     font-size: 21px;
@@ -410,6 +411,7 @@ padding-right: 69px;
     font-weight: bold;
     border: none;
     padding: 30px 125px;
+    z-index: 10;
 }
 .button-booking:hover {
     background-color: var(--basic-brown);
@@ -939,7 +941,7 @@ display: grid;
 
 
 .booking-form-container {
-   
+    display: none;
     width: 568px;
     padding: 53px 55px;
     position: absolute;
@@ -948,6 +950,18 @@ display: grid;
     left: 316px;
     background-color: var(--basic-white);
     box-shadow: 0 0 30px var(--basic-extra-light-black);
+}
+@keyframes bounce {
+    0% { transform: translateY(-86px); }
+    70% { transform: translateY(30px); }
+    90% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+    } 
+
+.modal-hide {
+    display: block;
+    animation-name: bounce;
+    animation-duration: 0.6s;
 }
 
 .booking-form {
