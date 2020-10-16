@@ -6,23 +6,7 @@
 */
 
 /*Fonts*/
-@font-face {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('PT Sans'), local('PTSans-Regular'),
-         url('../fonts/pt-sans-v12-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/pt-sans-v12-latin_cyrillic-regular.woff') format('woff');
-  }
- 
-  @font-face {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: local('PT Sans Bold'), local('PTSans-Bold'),
-         url('../fonts/pt-sans-v12-latin_cyrillic-700.woff2') format('woff2'),
-         url('../fonts/pt-sans-v12-latin_cyrillic-700.woff') format('woff');
-  }
+
 /*colors*/
 :root {
 --basic-light-black: #231F20;
@@ -428,13 +412,13 @@ padding-right: 69px;
 .map-position {
     position: relative;
     height: 473px;
-    background-color: transparent;
+    
 }
 
-.map img {
+.map iframe {
     position: absolute;
     top: 0;
-    z-index: -1;
+    z-index: 2;
 }
 
 /*footer*/ 
@@ -445,7 +429,7 @@ padding-right: 69px;
     grid-gap: 55px;
     background-color: var(--basic-light-white);
     padding: 0 82px;
-    
+    z-index: 3;
 }
 
 
@@ -941,7 +925,7 @@ display: grid;
 
 
 .booking-form-container {
-    display: none;
+    display: block;
     width: 568px;
     padding: 53px 55px;
     position: absolute;
@@ -950,6 +934,8 @@ display: grid;
     left: 316px;
     background-color: var(--basic-white);
     box-shadow: 0 0 30px var(--basic-extra-light-black);
+    animation-name: bounce;
+    animation-duration: 0.6s;
 }
 @keyframes bounce {
     0% { transform: translateY(-86px); }
@@ -959,9 +945,8 @@ display: grid;
     } 
 
 .modal-hide {
-    display: block;
-    animation-name: bounce;
-    animation-duration: 0.6s;
+    display: none;
+    
 }
 
 .booking-form {
