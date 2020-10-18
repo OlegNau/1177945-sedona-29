@@ -16,7 +16,7 @@ popupButton.addEventListener("click", function(evt) {
 
 
 
-form.addEventListener("sibmit",function (evt) {
+form.addEventListener("submit",function (evt) {
   if (!arrivalDate.value|| !dateOfDeparture.value|| !adults.value|| !child.value ) {
    evt.preventDefault();
    popup.classList.add("modal-error");}
