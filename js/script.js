@@ -1,21 +1,23 @@
 const popup = document.querySelector(".booking-form-container");
-const popupbutton = document.querySelector(".button-booking");
-let arrivaldate = popup.querySelector("[name=arrival-date]");
-let dateofdeparture = popup.querySelector("[name=date-of-departure]");
+const popupButton = document.querySelector(".button-booking");
+let arrivalDate = popup.querySelector("[name=arrival-date]");
+let dateOfDeparture = popup.querySelector("[name=date-of-departure]");
 let form = popup.querySelector("form");
 let adults = popup.querySelector("[name=adults]");
 let child = popup.querySelector("[name=children]");
 
+popup.classList.add("modal-hide");
 
-
-popupbutton.addEventListener("click", function(evt) {
+popupButton.addEventListener("click", function(evt) {
     evt.preventDefault();
-    popup.classList.toggle("modal-hide")
-    arrivaldate.focus();
+    popup.classList.toggle("modal-hide");
+    arrivalDate.focus();
 });
 
+
+
 form.addEventListener("sibmit",function (evt) {
-  if (!arrivaldate.value|| !dateofdeparture.value|| !adults.value|| !child.value ) {
+  if (!arrivalDate.value|| !dateOfDeparture.value|| !adults.value|| !child.value ) {
    evt.preventDefault();
   console.log("нужно ввести дату прибытия и дату выезда")}
 });
