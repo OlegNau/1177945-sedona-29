@@ -19,7 +19,7 @@ popupButton.addEventListener("click", function(evt) {
 form.addEventListener("sibmit",function (evt) {
   if (!arrivalDate.value|| !dateOfDeparture.value|| !adults.value|| !child.value ) {
    evt.preventDefault();
-  console.log("нужно ввести дату прибытия и дату выезда")}
+   popup.classList.add("modal-error");}
 });
 
 
@@ -35,4 +35,5 @@ try {
   storage = localStorage.getItem("child");
 } catch (err) {
   isStorageSupport = false;
-}
+};
+
