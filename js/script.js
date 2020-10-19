@@ -14,14 +14,11 @@ popupButton.addEventListener("click", function(evt) {
     arrivalDate.focus();
 });
 
-
-
 form.addEventListener("submit",function (evt) {
   if (!arrivalDate.value|| !dateOfDeparture.value|| !adults.value|| !child.value ) {
    evt.preventDefault();
    popup.classList.add("modal-error");}
 });
-
 
 let isStorageSupport = true;
 let storage = "";
