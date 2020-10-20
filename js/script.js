@@ -9,15 +9,15 @@ let child = popup.querySelector("[name=children]");
 popup.classList.add("modal-hide");
 
 popupButton.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    popup.classList.toggle("modal-hide");
-    arrivalDate.focus();
+  evt.preventDefault();
+  popup.classList.toggle("modal-hide");
+  arrivalDate.focus();
 });
 
 form.addEventListener("submit",function (evt) {
-  if (!arrivalDate.value|| !dateOfDeparture.value|| !adults.value|| !child.value ) {
-   evt.preventDefault();
-   popup.classList.add("modal-error");}
+  if(!arrivalDate.value|| !dateOfDeparture.value|| !adults.value|| !child.value ) {
+  evt.preventDefault();
+  popup.classList.add("modal-error");}
 });
 
 let isStorageSupport = true;
