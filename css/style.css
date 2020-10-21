@@ -195,6 +195,10 @@ img {
   text-align: center;
 }
 
+.intro-features p {
+  line-height: 26px;
+}
+
 .intro-features-h {
   font-weight: bold;
   font-size: 21px;
@@ -251,7 +255,7 @@ img {
 .first-feature-items div {
   width: 400px;
   justify-self: center;
-  align-self: end;
+  align-self: start;
   padding: 160px 50px 82px;
 }
 
@@ -427,6 +431,7 @@ margin-bottom: 45px;
 .map-position {
   position: relative;
   height: 473px;
+  background-color: var(--basic-light-gray);
 }
 
 .map iframe {
@@ -631,6 +636,13 @@ margin-bottom: 45px;
   background-image: url(../img/checkbox-on-disabled.svg);
 }
 
+.filter-input-checkbox:checked:focus+label::after {
+  outline: 3px solid var(--basic-black);
+}                 
+
+.filter-input-checkbox:focus+label::before {
+  outline: 3px solid var(--basic-black);
+}
 
 
 .search-filters-form h3 {
@@ -682,8 +694,9 @@ margin-bottom: 45px;
   height: 32px;
   background-color: transparent;
   border: none;
-  text-align: end;
-  line-height: 32px;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
 }
 
 .cost-inputs input[type='number'] {
@@ -918,6 +931,7 @@ padding-top: 5px;;
   margin: 7px 3px 12px 0px;
   display: inline-block;
   width: 110px;
+  vertical-align: middle;
 }
 
 .details {
@@ -972,8 +986,11 @@ padding-top: 5px;;
   margin-top: 5px;
   text-align: end;
   align-self: start;
-  scale: 1.2
 }
+
+
+
+
 
 .rating {
   margin-bottom: 0px;
@@ -1063,7 +1080,7 @@ padding-top: 5px;;
   width: 346px;
   padding-left: 11px;
   padding-right: 38px;
-  line-height: 38px;
+  line-height: 26px;
   height: 38px;
   font-weight: bold;
   text-transform: uppercase;
