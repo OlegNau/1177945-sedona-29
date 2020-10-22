@@ -910,7 +910,7 @@ padding-top: 5px;;
   color: var(--basic-light-blue);
 }
 
-.name-hotel:focus {
+.name-hotel:active {
   color: var(--basic-extra-light-black);
 }
 
@@ -936,7 +936,7 @@ padding-top: 5px;;
   vertical-align: top;
 }
 
-.details:hover {
+.details:hover, .details:focus {
   background-color: var(--basic-blue);
 }
 
@@ -957,7 +957,7 @@ padding-top: 5px;;
   vertical-align: top;
 }
 
-.to-book:hover {
+.to-book:hover, .to-book:focus {
   background-color: var(--basic-brown);
 }
 
