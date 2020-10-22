@@ -5,8 +5,6 @@
 * Browsers: last 2 version,not dead,not ie <=11
 */
 
-
-
 :root {
   --basic-light-black: #231F20;
   --basic-black: #000000;
@@ -32,8 +30,6 @@
   --basic-toggle-color: #ABABAB;
   --basic-disabled-color: #6a6a6a;
 }
-
-  
   
   /*Global*/
 
@@ -71,7 +67,6 @@ img {
 .page {
   height: 100%;
 }
-
 
   /*Header*/
 
@@ -133,7 +128,6 @@ img {
 .site-navigation li:nth-child(4n+4) {
   text-align: end;
 }
-
 
   /*main tittle page*/
 
@@ -431,7 +425,6 @@ margin-bottom: 45px;
 .map-position {
   position: relative;
   height: 473px;
-  background-color: var(--basic-light-gray);
 }
 
 .map iframe {
@@ -445,8 +438,8 @@ margin-bottom: 45px;
   position: absolute;
   top: 0;
   z-index: 1;
+  background-color: var(--basic-light-gray);
 }
-
 
   /*footer*/
 
@@ -636,15 +629,6 @@ margin-bottom: 45px;
   background-image: url(../img/checkbox-on-disabled.svg);
 }
 
-.filter-input-checkbox:checked:focus+label::after {
-  outline: 3px solid var(--basic-black);
-}                 
-
-.filter-input-checkbox:focus+label::before {
-  outline: 3px solid var(--basic-black);
-}
-
-
 .search-filters-form h3 {
   font-size: 16px;
   color: var(--basic-white);
@@ -656,7 +640,7 @@ margin-bottom: 45px;
 .filter-input-checkbox:focus+label:before {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+  
 }
 
 .filter-input-checkbox:focus+label:after {
@@ -772,6 +756,11 @@ margin-bottom: 45px;
   color: var(--basic-white);
   text-transform: uppercase;
   display: block;
+}
+
+.range-filter .show-button:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .range-filter .show-button:hover {
@@ -988,10 +977,6 @@ padding-top: 5px;;
   align-self: start;
 }
 
-
-
-
-
 .rating {
   margin-bottom: 0px;
   color: var(--basic-dark-gray);
@@ -1002,7 +987,6 @@ padding-top: 5px;;
   align-self: end;
   line-height: 27px;
 }
-
 
   /*Modal window*/
 
